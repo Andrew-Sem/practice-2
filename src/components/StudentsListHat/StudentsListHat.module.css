@@ -1,0 +1,11 @@
+.hat{
+    padding: 0 0.4rem;
+    margin: 0 0.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hat_item{
+    color: var(--color-text)
+}

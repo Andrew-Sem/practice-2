@@ -1,0 +1,48 @@
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
+    margin: 0 0.2rem;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.row:nth-child(odd){
+    background-color: var(--color-gray);
+}
+
+.row:hover{
+    background-color: var(--color-blue);
+    color: var(--color-white)
+}
+
+.id_block{
+    width: 20px;
+}
+
+.name_block{
+    width: 250px;
+}
+
+.city_block{
+    width: 150px;
+}
+
+.faculty_block{
+    width: 50px;
+}
+
+.speciality_block{
+    width: 200px;
+}
+
+.course_block{
+    width: 50px;
+}
+
+.avgMarks_block{
+    width: 80px;
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  },
+  {
+    "id": 2,
+    "name": "Ervin",
+    "surname": "Howell",
+    "patronymic": "Abakumovich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 86,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 18
+    },
+    "email": "Shanna@melissa.tv",
+    "city": "Wisokyburgh",
+    "phone": "2345678901"
+  },
+  {
+    "id": 3,
+    "name": "Clementine",
+    "surname": "Bauch",
+    "patronymic": "Abramovich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 80,
+      "faculty": "FAM",
+      "speciality": "Metallurgy",
+      "course": 2,
+      "school": 9
+    },
+    "email": "Nathan@yesenia.net",
+    "city": "McKenziehaven",
+    "phone": "3456789012"
+  },
+  {
+    "id": 4,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  },
+  {
+    "id": 5,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  },
+  {
+    "id": 6,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  },
+  {
+    "id": 7,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  },
+  {
+    "id": 8,
+    "name": "Andrew",
+    "surname": "Semenov",
+    "patronymic": "Igorevich",
+    "birthdayYear": 2002,
+    "education": {
+      "isSatisfactory": true,
+      "avgMarks": 95,
+      "faculty": "FEE",
+      "speciality": "Software engineering",
+      "course": 2,
+      "school": 36
+    },
+    "email": "secretofchernui@gmail.com",
+    "city": "Volzhskiy",
+    "phone": "1234567890"
+  }
+]
