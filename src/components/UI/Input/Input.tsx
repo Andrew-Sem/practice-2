@@ -1,12 +1,21 @@
 import cl from "./Input.module.css";
 import {FC} from "react";
 
-interface InputProps{
-    placeholder: string
+interface InputProps {
+    placeholder: string,
+    value: string | number,
+    type?: string,
+    label?: string,
+    onChange?(e: any): void
 }
 
-const Input:FC<InputProps> = ({placeholder}) => {
-    return <input className={cl.input} placeholder={placeholder}/>;
+const Input: FC<InputProps> = ({label, ...props}) => {
+    return (
+        <label className={cl.label} >
+            {label}
+            <input className={cl.input} {...props} />
+        </label>
+    )
 }
 
 export default Input

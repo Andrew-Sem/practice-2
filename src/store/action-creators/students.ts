@@ -1,6 +1,7 @@
 import {Dispatch} from "redux";
 import {student, StudentAction, StudentActionTypes} from "../../types/student";
 import data from "../../db/students.json"
+import checkStudentTypes from "../../utils/checkStudentTypes";
 
 
 export const fetchStudents = () => {
@@ -20,6 +21,7 @@ export const fetchStudents = () => {
 }
 
 export const createStudent = (student: student) => {
+
     return (dispatch: Dispatch<StudentAction>) => {
         dispatch({type: StudentActionTypes.CREATE_STUDENT, payload: student})
     }

@@ -25,7 +25,10 @@ const StudentsList: FC = () => {
         <div className={cl.list}>
             <StudentsListHat/>
             {students.map(student =>
-                <StudentCard key={student.id} student={student}/>
+                <StudentCard
+                    key={student.id}
+                    student={student}
+                    index={students.indexOf(student)}/>
             )}
         </div>
     );

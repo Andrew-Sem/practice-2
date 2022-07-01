@@ -1,20 +1,20 @@
 export interface student {
-    id: number;
+    id: number | string;
     name: string;
     surname: string;
-    patronymic: string;
-    birthdayYear: number;
-    education:{
+    patronymic?: string;
+    birthdayYear?: number;
+    education: {
         isSatisfactory: boolean;
         avgMarks: number;
         faculty: string;
         speciality: string;
         course: number;
-        school: number;
+        school?: number;
     };
     email: string;
     city: string;
-    phone: string;
+    phone?: string;
 }
 
 export interface StudentState {

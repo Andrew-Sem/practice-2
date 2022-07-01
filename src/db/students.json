@@ -55,39 +55,39 @@
   },
   {
     "id": 4,
-    "name": "Andrew",
-    "surname": "Semenov",
-    "patronymic": "Igorevich",
+    "name": "Patricia",
+    "surname": "Lebsack",
+    "patronymic": "Abrosimovna",
     "birthdayYear": 2002,
     "education": {
-      "isSatisfactory": true,
-      "avgMarks": 95,
-      "faculty": "FEE",
-      "speciality": "Software engineering",
+      "isSatisfactory": false,
+      "avgMarks": 71,
+      "faculty": "FAM",
+      "speciality": "Metallurgy",
       "course": 2,
-      "school": 36
+      "school": 5
     },
-    "email": "secretofchernui@gmail.com",
-    "city": "Volzhskiy",
-    "phone": "1234567890"
+    "email": "Julianne.OConner@kory.org",
+    "city": "South Elvis",
+    "phone": "4567890123"
   },
   {
     "id": 5,
-    "name": "Andrew",
-    "surname": "Semenov",
-    "patronymic": "Igorevich",
-    "birthdayYear": 2002,
+    "name": "Chelsey",
+    "surname": "Dietrich",
+    "patronymic": "Avgustovich",
+    "birthdayYear": 2001,
     "education": {
-      "isSatisfactory": true,
-      "avgMarks": 95,
+      "isSatisfactory": false,
+      "avgMarks": 70,
       "faculty": "FEE",
-      "speciality": "Software engineering",
+      "speciality": "Economic",
       "course": 2,
-      "school": 36
+      "school": 3
     },
-    "email": "secretofchernui@gmail.com",
-    "city": "Volzhskiy",
-    "phone": "1234567890"
+    "email": "Lucio_Hettinger@annie.ca",
+    "city": "Roscoeview",
+    "phone": "5678901234"
   },
   {
     "id": 6,
