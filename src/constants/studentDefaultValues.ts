@@ -99,7 +99,7 @@ export const cities = [
 ]
 
 export const studentDefaultValue = {
-    id: Date.now().toString(),
+    id: -1,
     name: "",
     surname: "",
     patronymic: "",

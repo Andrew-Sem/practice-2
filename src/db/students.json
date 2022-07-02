@@ -88,59 +88,5 @@
     "email": "Lucio_Hettinger@annie.ca",
     "city": "Roscoeview",
     "phone": "5678901234"
-  },
-  {
-    "id": 6,
-    "name": "Andrew",
-    "surname": "Semenov",
-    "patronymic": "Igorevich",
-    "birthdayYear": 2002,
-    "education": {
-      "isSatisfactory": true,
-      "avgMarks": 95,
-      "faculty": "FEE",
-      "speciality": "Software engineering",
-      "course": 2,
-      "school": 36
-    },
-    "email": "secretofchernui@gmail.com",
-    "city": "Volzhskiy",
-    "phone": "1234567890"
-  },
-  {
-    "id": 7,
-    "name": "Andrew",
-    "surname": "Semenov",
-    "patronymic": "Igorevich",
-    "birthdayYear": 2002,
-    "education": {
-      "isSatisfactory": true,
-      "avgMarks": 95,
-      "faculty": "FEE",
-      "speciality": "Software engineering",
-      "course": 2,
-      "school": 36
-    },
-    "email": "secretofchernui@gmail.com",
-    "city": "Volzhskiy",
-    "phone": "1234567890"
-  },
-  {
-    "id": 8,
-    "name": "Andrew",
-    "surname": "Semenov",
-    "patronymic": "Igorevich",
-    "birthdayYear": 2002,
-    "education": {
-      "isSatisfactory": true,
-      "avgMarks": 95,
-      "faculty": "FEE",
-      "speciality": "Software engineering",
-      "course": 2,
-      "school": 36
-    },
-    "email": "secretofchernui@gmail.com",
-    "city": "Volzhskiy",
-    "phone": "1234567890"
   }
 ]

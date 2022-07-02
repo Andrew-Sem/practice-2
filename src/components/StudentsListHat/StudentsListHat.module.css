@@ -1,9 +1,16 @@
-.hat{
-    padding: 0 0.4rem;
-    margin: 0 0.2rem;
+.hat_wrapper{
+    position: fixed;
     width: 100%;
+    background-color: var(--color-white);
+}
+
+.hat{
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    width: 100%;
+    border-bottom: 1px solid var(--color-dark-gray);
 }
 
 .hat_item{

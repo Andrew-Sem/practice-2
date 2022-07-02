@@ -23,7 +23,6 @@ const StudentsList: FC = () => {
 
     return (
         <div className={cl.list}>
-            <StudentsListHat/>
             {students.map(student =>
                 <StudentCard
                     key={student.id}

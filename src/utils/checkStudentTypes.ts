@@ -55,7 +55,6 @@ const checkStudentTypes = (student: student): error => {
     }
     if (student.education.course < 1 || student.education.course > 5)
         return {message: "Wrong course", cause: student.education.course}
-
     return {message: ""}
 }
 

@@ -1,4 +1,4 @@
-import React, {useId, useState} from 'react';
+import React, { useState} from 'react';
 import Btn from "../UI/Btn/Btn";
 import StudentsList from "../StudentsList/StudentsList";
 import Input from "../UI/Input/Input";
@@ -8,7 +8,6 @@ import {useActions} from "../../hooks/useActions";
 import checkStudentTypes from "../../utils/checkStudentTypes";
 import createRandomStudent from "../../utils/createRandomStudent";
 import {studentDefaultValue} from "../../constants/studentDefaultValues";
-import createALotRandomStudents from "../../utils/createALotRandomStudents";
 
 const StudentsForm = () => {
     const {createStudent} = useActions()

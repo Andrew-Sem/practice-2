@@ -3,14 +3,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem;
+    padding: 0.4rem 1rem;
     margin: 0 0.2rem;
     border-radius: 10px;
     background-color: var(--color-white);
     cursor: pointer;
 }
 
-.row:nth-child(odd){
+.row:nth-child(even){
     background-color: var(--color-gray);
 }
 
