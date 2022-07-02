@@ -3,7 +3,7 @@ export interface student {
     name: string;
     surname: string;
     patronymic?: string;
-    birthdayYear?: number;
+    birthdayYear: number;
     education: {
         isSatisfactory: boolean;
         avgMarks: number;

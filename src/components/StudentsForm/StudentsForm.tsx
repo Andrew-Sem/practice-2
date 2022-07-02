@@ -43,7 +43,6 @@ const StudentsForm = () => {
         if(num < 1) return {message: "num must be > 0", num: num}
         for(let i = 0; i < num; i++)
             addNewRandomStudent()
-        console.log(num)
     }
 
     return (
