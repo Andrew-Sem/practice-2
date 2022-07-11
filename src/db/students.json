@@ -11,7 +11,9 @@
       "faculty": "FEE",
       "speciality": "Software engineering",
       "course": 2,
-      "school": 36
+      "school": 36,
+      "year": "2022/2023"
+
     },
     "email": "secretofchernui@gmail.com",
     "city": "Volzhskiy",
@@ -29,7 +31,9 @@
       "faculty": "FEE",
       "speciality": "Software engineering",
       "course": 2,
-      "school": 18
+      "school": 18,
+      "year": "2022/2023"
+
     },
     "email": "Shanna@melissa.tv",
     "city": "Wisokyburgh",
@@ -47,7 +51,9 @@
       "faculty": "FAM",
       "speciality": "Metallurgy",
       "course": 2,
-      "school": 9
+      "school": 9,
+      "year": "2022/2023"
+
     },
     "email": "Nathan@yesenia.net",
     "city": "McKenziehaven",
@@ -65,7 +71,8 @@
       "faculty": "FAM",
       "speciality": "Metallurgy",
       "course": 2,
-      "school": 5
+      "school": 5,
+      "year": "2022/2023"
     },
     "email": "Julianne.OConner@kory.org",
     "city": "South Elvis",
@@ -83,7 +90,9 @@
       "faculty": "FEE",
       "speciality": "Economic",
       "course": 2,
-      "school": 3
+      "school": 3,
+      "year": "2022/2023"
+
     },
     "email": "Lucio_Hettinger@annie.ca",
     "city": "Roscoeview",

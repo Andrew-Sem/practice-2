@@ -28,7 +28,7 @@ const StudentAddModal: FC<StudentAddModalProps> = ({visible, setVisible}) => {
         const [studentPhone, setStudentPhone] = useState("")
 
         const addNewStudent = () => {
-            const student : student = {
+            const student: student = {
                 id: Math.random(),
                 name: studentName,
                 surname: studentSurname,
@@ -36,11 +36,12 @@ const StudentAddModal: FC<StudentAddModalProps> = ({visible, setVisible}) => {
                 birthdayYear: studentBirthdayYear,
                 education: {
                     avgMarks: studentAvgMarks,
-                    isSatisfactory: studentAvgMarks > 60? true : false,
+                    isSatisfactory: studentAvgMarks > 60 ? true : false,
                     faculty: studentFaculty,
                     speciality: studentSpeciality,
                     course: studentCourse,
-                    school: studentSchool
+                    school: studentSchool,
+                    year: "2022/2023"
                 },
                 email: studentEmail,
                 city: studentCity,

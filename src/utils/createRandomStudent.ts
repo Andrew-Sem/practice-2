@@ -3,6 +3,7 @@ import {cities, faculties, names, patronymics, specialities, surnames} from "../
 
 
 const createRandomStudent = (): student => {
+    const year = Math.round(Math.random() * 5) + 2017
     const student: student = {
         id: Math.random(),
         name: names[~~(Math.random() * names.length)],
@@ -15,12 +16,14 @@ const createRandomStudent = (): student => {
             faculty: faculties[~~(Math.random() * faculties.length)],
             speciality: "", // declare later
             course: Math.ceil(Math.random() * 5),
-            school: Math.ceil(Math.random() * 40)
+            school: Math.ceil(Math.random() * 40),
+            year: year.toString() + "/" + (year+1).toString()
         },
         email: "", // declare later
         city: cities[~~(Math.random() * cities.length)],
         phone: (Math.pow(10, 10) * Math.random()).toString()
     }
+    console.log(student.education.year);
     if (student.education.avgMarks > 60) student.education.isSatisfactory = true
     switch (student.education.faculty) {
         case "FEE":

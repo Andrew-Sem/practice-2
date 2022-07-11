@@ -23,7 +23,6 @@ const App = () => {
             <BottomControlPanel modals={modals}/>
             <StudentAddModal visible={studentModal} setVisible={setStudentModal}/>
             <HistogramModal visible={graphModal} setVisible={setGraphModal}/>
-
         </div>
     );
 }

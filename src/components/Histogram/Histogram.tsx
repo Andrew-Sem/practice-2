@@ -5,31 +5,34 @@ import AxisLeft from "./AxisLeft";
 import Marks from "./Marks";
 import cl from "./Histogram.module.css"
 import {findBiggestObjByFieldLength} from "../../utils/findBiggestObjByField";
-import {country} from "../../types/country";
+import {student} from "../../types/student";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+
+const width = 700;
+const height = 400;
+const xAxisLabelOffset = 50;
 
 const Histogram = () => {
-    const width = 700;
-    const height = 400;
-    const xAxisLabelOffset = 50;
+    const {error, loading, students} = useTypedSelector(state => state.student)
 
-    const data: Array<country> = [
-        {Country: "China", Population: 1439324000},
-        {Country: "India", Population: 1380004000},
-        {Country: "USA", Population: 331003000},
-        {Country: "Russia Federation", Population: 144100000}
-    ]
+    const data = students
+    if(!data.length){
+        return <h1>Loading..</h1>
+    }
+
     const margin = {
         top: 20,
         right: 30,
         bottom: 65,
-        // find the biggest country by her name length and set 8px for 1 symbol
-        left: findBiggestObjByFieldLength(data, "Country").Country.length * 8};
+        // find the biggest country by her name length and set 9px for 1 symbol
+        // left: findBiggestObjByFieldLength(data, "education.speciality").education.speciality.length * 9};
+        left: 50}
 
     const innerHeight = height - margin.top - margin.bottom;
     const innerWidth = width - margin.left - margin.right;
 
-    const yValue = (d: country) => d.Country;
-    const xValue = (d: country) => d.Population;
+    const yValue = (d: student) => d.education.speciality;
+    const xValue = (d: student) => d.education.avgMarks;
 
     const siFormat = format('.2s');
     const xAxisTickFormat = (tickValue: any) => siFormat(tickValue).replace('G', 'B');

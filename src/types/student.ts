@@ -11,6 +11,7 @@ export interface student {
         speciality: string;
         course: number;
         school?: number;
+        year: string;
     };
     email: string;
     city: string;
