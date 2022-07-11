@@ -99,7 +99,7 @@ export const cities = [
 ]
 
 export const studentDefaultValue = {
-    id: -1,
+    id: Math.random(),
     name: "",
     surname: "",
     patronymic: "",

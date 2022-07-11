@@ -1,0 +1,11 @@
+.student_modal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.student_modal input{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}

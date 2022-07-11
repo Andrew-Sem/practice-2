@@ -1,7 +1,6 @@
 import {Dispatch} from "redux";
 import {student, StudentAction, StudentActionTypes} from "../../types/student";
 import data from "../../db/students.json"
-import checkStudentTypes from "../../utils/checkStudentTypes";
 
 
 export const fetchStudents = () => {
