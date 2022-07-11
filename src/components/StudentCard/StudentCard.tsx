@@ -13,10 +13,10 @@ const StudentCard:FC<StudentCardProps> = ({student, index}) => {
             <span className={cl.index_block}>{index + 1}</span>
             <span className={cl.name_block}>{student.surname} {student.name} {student.patronymic}</span>
             <span className={cl.city_block}>{student.city}</span>
-            <span className={cl.faculty_block}>{student.education.faculty}</span>
-            <span className={cl.speciality_block}>{student.education.speciality}</span>
-            <span className={cl.course_block}>{student.education.course}</span>
-            <span className={cl.avgMarks_block}>{student.education.avgMarks}</span>
+            <span className={cl.faculty_block}>{student.faculty}</span>
+            <span className={cl.speciality_block}>{student.speciality}</span>
+            <span className={cl.course_block}>{student.course}</span>
+            <span className={cl.avgMarks_block}>{student.avgMarks}</span>
         </div>
     );
 };

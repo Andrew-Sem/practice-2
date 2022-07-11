@@ -6,12 +6,15 @@ import checkStudentTypes from "../../utils/checkStudentTypes";
 import {useActions} from "../../hooks/useActions";
 import Btn from "../UI/Btn/Btn";
 import {modals} from "../../types/modal";
+import StudentsFilter from "../StudentsFilter/StudentsFilter";
 
 interface BottomControlPanelProps {
-    modals:modals
+    modals:modals,
+    filter:any,
+    setFilter:any
 }
 
-const BottomControlPanel:FC<BottomControlPanelProps> = ({modals}) => {
+const BottomControlPanel:FC<BottomControlPanelProps> = ({modals, filter, setFilter}) => {
     const [numOfRandomStudents, setNumOfRandomStudents] = useState(0)
     const {studentModal, graphModal} = modals
     const {createStudent} = useActions()
@@ -28,6 +31,7 @@ const BottomControlPanel:FC<BottomControlPanelProps> = ({modals}) => {
         <div className={cl.panel_wrapper}>
             <div className={"container"}>
                 <div className={cl.panel}>
+                    <StudentsFilter filter={filter} setFilter={setFilter} />
                     <Input
                         placeholder={"Enter num of students"}
                         value={numOfRandomStudents}
@@ -38,7 +42,6 @@ const BottomControlPanel:FC<BottomControlPanelProps> = ({modals}) => {
                     <Btn onClick={() => addALotOfNewRandomStudents(numOfRandomStudents)}>Add random students</Btn>
                     <Btn onClick={() => studentModal.setVisible(!studentModal.visible)}>Add 1 student</Btn>
                     <Btn onClick={() => graphModal.setVisible(!graphModal.visible)}>Show graph</Btn>
-
                 </div>
             </div>
         </div>

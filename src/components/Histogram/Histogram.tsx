@@ -31,8 +31,8 @@ const Histogram = () => {
     const innerHeight = height - margin.top - margin.bottom;
     const innerWidth = width - margin.left - margin.right;
 
-    const yValue = (d: student) => d.education.speciality;
-    const xValue = (d: student) => d.education.avgMarks;
+    const yValue = (d: student) => d.speciality;
+    const xValue = (d: student) => d.avgMarks;
 
     const siFormat = format('.2s');
     const xAxisTickFormat = (tickValue: any) => siFormat(tickValue).replace('G', 'B');

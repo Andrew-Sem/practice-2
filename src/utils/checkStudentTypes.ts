@@ -12,49 +12,49 @@ const checkStudentTypes = (student: student): error => {
     if (student.surname === "") return {message: "Wrong surname", cause: student.surname}
     if (student.birthdayYear > 2006 || student.birthdayYear < 1990)
         return {message: "Wrong birthday year", cause: student.birthdayYear}
-    if (student.education.avgMarks < 61 && student.education.isSatisfactory === true)
+    if (student.avgMarks < 61 && student.isSatisfactory === true)
         return {
             message: "Wrong isSatisfactory or avgMark", cause: {
-                isSatisfactory: student.education.isSatisfactory,
-                avgMark: student.education.avgMarks
+                isSatisfactory: student.isSatisfactory,
+                avgMark: student.avgMarks
             }
         }
     const contains = (arr: Array<string>, elem: string) => {
         return arr.indexOf(elem) != -1;
     }
-    switch (student.education.faculty) {
+    switch (student.faculty) {
         case "FEE":
-            if (!contains(specialities.FEE, student.education.speciality))
+            if (!contains(specialities.FEE, student.speciality))
                 return {
                     message: "Wrong faculty or speciality", cause: {
-                        faculty: student.education.course,
-                        speciality: student.education.speciality
+                        faculty: student.course,
+                        speciality: student.speciality
                     }
                 }
             break;
         case "FAM":
-            if (!contains(specialities.FAM, student.education.speciality))
+            if (!contains(specialities.FAM, student.speciality))
                 return {
                     message: "Wrong faculty or speciality", cause: {
-                        faculty: student.education.course,
-                        speciality: student.education.speciality
+                        faculty: student.course,
+                        speciality: student.speciality
                     }
                 }
             break;
         case "FE" :
-            if (!contains(specialities.FE, student.education.speciality))
+            if (!contains(specialities.FE, student.speciality))
                 return {
                     message: "Wrong faculty or speciality", cause: {
-                        faculty: student.education.course,
-                        speciality: student.education.speciality
+                        faculty: student.course,
+                        speciality: student.speciality
                     }
                 }
             break;
         default:
-            return  {message: `Faculty not exist, try: ${faculties.join(", ")}`, cause: student.education.faculty}
+            return  {message: `Faculty not exist, try: ${faculties.join(", ")}`, cause: student.faculty}
     }
-    if (student.education.course < 1 || student.education.course > 5)
-        return {message: "Wrong course", cause: student.education.course}
+    if (student.course < 1 || student.course > 5)
+        return {message: "Wrong course", cause: student.course}
     return {message: ""}
 }
 

@@ -4,15 +4,13 @@ export interface student {
     surname: string;
     patronymic?: string;
     birthdayYear: number;
-    education: {
-        isSatisfactory: boolean;
-        avgMarks: number;
-        faculty: string;
-        speciality: string;
-        course: number;
-        school?: number;
-        year: string;
-    };
+    isSatisfactory: boolean;
+    avgMarks: number;
+    faculty: string;
+    speciality: string;
+    course: number;
+    school?: number;
+    year: string;
     email: string;
     city: string;
     phone?: string;
@@ -40,7 +38,7 @@ interface FetchStudentsSuccessAction {
     payload: student[]
 }
 
-interface FetchUsersErrorAction{
+interface FetchUsersErrorAction {
     type: StudentActionTypes.FETCH_STUDENTS_ERROR;
     payload: string
 }

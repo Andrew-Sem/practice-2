@@ -9,9 +9,8 @@ interface ModalProps{
 
 const Modal:FC<ModalProps> = ({ children, visible, setVisible }) => {
     const rootClasses = [cl.modal];
-    if (visible) {
+    if (visible)
         rootClasses.push(cl.active);
-    }
 
     return (
         <div className={rootClasses.join(" ")} onClick={() => setVisible(false)}>

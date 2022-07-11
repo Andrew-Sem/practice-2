@@ -9,6 +9,7 @@ import cl from "./StudentAddModal.module.css"
 
 interface StudentAddModalProps {
     visible: boolean;
+
     setVisible(arg0: boolean): any
 }
 
@@ -34,15 +35,13 @@ const StudentAddModal: FC<StudentAddModalProps> = ({visible, setVisible}) => {
                 surname: studentSurname,
                 patronymic: studentPatronymic,
                 birthdayYear: studentBirthdayYear,
-                education: {
-                    avgMarks: studentAvgMarks,
-                    isSatisfactory: studentAvgMarks > 60 ? true : false,
-                    faculty: studentFaculty,
-                    speciality: studentSpeciality,
-                    course: studentCourse,
-                    school: studentSchool,
-                    year: "2022/2023"
-                },
+                avgMarks: studentAvgMarks,
+                isSatisfactory: studentAvgMarks > 60 ? true : false,
+                faculty: studentFaculty,
+                speciality: studentSpeciality,
+                course: studentCourse,
+                school: studentSchool,
+                year: "2022/2023",
                 email: studentEmail,
                 city: studentCity,
                 phone: studentPhone
