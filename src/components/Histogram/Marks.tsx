@@ -3,7 +3,7 @@ import cl from "./Histogram.module.css"
 import {student} from "../../types/student";
 
 interface MarksProps{
-    data: Array<student>,
+    data: Array<any>,
     xScale: any,
     yScale: any,
     xValue: any,
@@ -12,11 +12,12 @@ interface MarksProps{
 }
 
 const Marks:FC<MarksProps> = ({data, xScale, yScale, xValue, yValue, tooltipFormat}) => {
+    console.log(data)
     return (
         <>
             {data.map(d => (<rect
                 className={cl.mark}
-                key={d.id}
+                key={d.name}
                 x={0}
                 y={yScale(yValue(d))}
                 width={xScale(xValue(d))}

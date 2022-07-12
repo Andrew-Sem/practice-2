@@ -19,6 +19,9 @@ export const studentReducer = (state = initialState, action:StudentAction): Stud
             return  {...state, students: [...state.students, action.payload]}
         case StudentActionTypes.DELETE_STUDENT:
             return {...state, students: state.students.filter(student => student.id != action.payload)}
+        case StudentActionTypes.CHANGE_STUDENT:
+            // удаляем прошлого студента и добавляем нового с этим же id
+            return {...state, students: [...state.students.filter(student => student.id != action.payload.id), action.payload]}
         default:
             return state
     }

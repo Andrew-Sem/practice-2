@@ -5,7 +5,6 @@ import Loader from "../UI/Loader/Loader";
 import StudentCard from "../StudentCard/StudentCard";
 import cl from "./StudentsList.module.css"
 import {StudentState} from "../../types/student";
-import StudentModal from "../StudentModal/StudentModal";
 
 interface StudentListProps extends StudentState {
     studentModal: boolean,
@@ -14,19 +13,16 @@ interface StudentListProps extends StudentState {
 }
 
 const StudentsList: FC<StudentListProps> = (props) => {
-    const {error, loading, students, studentModal, setStudentModal, setCurrentStudentId} = props
+    const {error, loading, students, setStudentModal, setCurrentStudentId} = props
     const {fetchStudents} = useActions()
-
 
     useEffect(() => {
         fetchStudents()
     }, [])
-
     if (loading)
         return <Loader/>
-    if (error) {
+    if (error)
         return <h1>{error}</h1>
-    }
 
     return (
         <div className={"container"}>

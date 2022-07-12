@@ -30,3 +30,9 @@ export const deleteStudent = (id: string | number) => {
         dispatch({type: StudentActionTypes.DELETE_STUDENT, payload: id})
     }
 }
+
+export const changeStudent = (student:student) => {
+    return(dispatch: Dispatch<StudentAction>) => {
+        dispatch({type: StudentActionTypes.CHANGE_STUDENT, payload: student})
+    }
+}

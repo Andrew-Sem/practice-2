@@ -1,3 +1,5 @@
+import {student} from "../types/student";
+
 export const names = [
     "Andrew",
     "Ivan",
@@ -104,15 +106,14 @@ export const studentDefaultValue = {
     surname: "",
     patronymic: "",
     birthdayYear: -1,
-    education: {
-        avgMarks: -1,
-        isSatisfactory: false,
-        faculty: "",
-        speciality: "",
-        course: -1,
-        school: -1
-    },
+    avgMarks: -1,
+    isSatisfactory: false,
+    faculty: "",
+    speciality: "",
+    course: -1,
+    school: -1,
     email: "",
     city: "",
-    phone: ""
+    phone: "",
+    year: "2022/2023"
 }

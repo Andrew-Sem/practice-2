@@ -18,7 +18,7 @@ const createRandomStudent = (): student => {
         year: year.toString() + "/" + (year + 1).toString(),
         email: "", // declare later
         city: cities[~~(Math.random() * cities.length)],
-        phone: (Math.pow(10, 10) * Math.random()).toString()
+        phone: "+" + Math.round(Math.pow(10, 10) * Math.random()).toString()
     }
     if (student.avgMarks > 60) student.isSatisfactory = true
     switch (student.faculty) {
@@ -36,7 +36,7 @@ const createRandomStudent = (): student => {
     }
     const chars = 'abcdefghijklmnopqrstuvwxyz1234567890';
     let string = '';
-    for (let i = 0; i < 15; i++)
+    for (let i = 0; i < 10; i++)
         string += chars[Math.floor(Math.random() * chars.length)];
     student.email = string + '@gmail.com'
     return student

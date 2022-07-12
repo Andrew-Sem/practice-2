@@ -9,14 +9,14 @@ import {modals} from "../../types/modal";
 import StudentsFilter from "../StudentsFilter/StudentsFilter";
 
 interface BottomControlPanelProps {
-    modals:modals,
-    filter:any,
-    setFilter:any
+    modals: modals,
+    filter: any,
+    setFilter: any
 }
 
-const BottomControlPanel:FC<BottomControlPanelProps> = ({modals, filter, setFilter}) => {
+const BottomControlPanel: FC<BottomControlPanelProps> = ({modals, filter, setFilter}) => {
     const [numOfRandomStudents, setNumOfRandomStudents] = useState(0)
-    const {studentModal, graphModal} = modals
+    const {studentAddModal, graphModal} = modals
     const {createStudent} = useActions()
     const addALotOfNewRandomStudents = (num: number) => {
         if (num < 1) return {message: "num must be > 0", num: num}
@@ -31,7 +31,7 @@ const BottomControlPanel:FC<BottomControlPanelProps> = ({modals, filter, setFilt
         <div className={cl.panel_wrapper}>
             <div className={"container"}>
                 <div className={cl.panel}>
-                    <StudentsFilter filter={filter} setFilter={setFilter} />
+                    <StudentsFilter filter={filter} setFilter={setFilter}/>
                     <Input
                         placeholder={"Enter num of students"}
                         value={numOfRandomStudents}
@@ -41,10 +41,16 @@ const BottomControlPanel:FC<BottomControlPanelProps> = ({modals, filter, setFilt
                     />
                     <Btn
                         onClick={() => addALotOfNewRandomStudents(numOfRandomStudents)}
-                        type={"safe"}>
+                        type={"safe"}
+                    >
                         Add random students
                     </Btn>
-                    <Btn onClick={() => studentModal.setVisible(!studentModal.visible)}>Add 1 student</Btn>
+                    <Btn
+                        onClick={() => studentAddModal.setVisible(!studentAddModal.visible)}
+                        type={"safe"}
+                    >
+                        Add student
+                    </Btn>
                     <Btn onClick={() => graphModal.setVisible(!graphModal.visible)}>Show graph</Btn>
                 </div>
             </div>

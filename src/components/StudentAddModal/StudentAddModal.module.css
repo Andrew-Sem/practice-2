@@ -9,3 +9,8 @@
     margin-right: 5px;
     margin-bottom: 20px;
 }
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+}

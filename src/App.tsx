@@ -39,7 +39,7 @@ const App = () => {
             <BottomControlPanel modals={modals} filter={filter} setFilter={setFilter}/>
             <StudentModal visible={studentModal} setVisible={setStudentModal} id={currentStudentId}/>
             <StudentAddModal visible={studentAddModal} setVisible={setStudentAddModal}/>
-            <HistogramModal visible={graphModal} setVisible={setGraphModal}/>
+            <HistogramModal visible={graphModal} setVisible={setGraphModal} data={sortedAndSearchedStudents}/>
         </div>
     );
 }

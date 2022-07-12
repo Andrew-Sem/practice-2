@@ -7,12 +7,14 @@ interface AxisBottomProps{
     tickFormat: any
 }
 
-export const AxisBottom:FC<AxisBottomProps> = ({ xScale, innerHeight, tickFormat }) =>
-    xScale.ticks().map((tickValue:any) => (
+export const AxisBottom:FC<AxisBottomProps> = ({ xScale, innerHeight, tickFormat }) =>{
+    console.log(xScale.ticks())
+    return (xScale.ticks().map((tickValue:any) => (
         <g className={cl.tick} key={tickValue} transform={`translate(${xScale(tickValue)},0)`}>
             <line y2={innerHeight} />
             <text style={{ textAnchor: 'middle' }} dy=".71em" y={innerHeight + 3}>
                 {tickFormat(tickValue)}
             </text>
         </g>
-    ));
+    )))
+}

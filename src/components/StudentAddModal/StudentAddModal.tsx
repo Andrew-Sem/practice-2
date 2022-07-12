@@ -146,7 +146,9 @@ const StudentAddModal: FC<StudentAddModalProps> = ({visible, setVisible}) => {
                             type={"phone"}
                         />
                     </div>
-                    <Btn onClick={addNewStudent}>Add student</Btn>
+                    <div className={cl.btns}>
+                        <Btn type={"safe"} onClick={addNewStudent}>Add</Btn>
+                    </div>
                 </Modal>
             </div>
         )
