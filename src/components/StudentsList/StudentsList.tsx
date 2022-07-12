@@ -5,14 +5,18 @@ import Loader from "../UI/Loader/Loader";
 import StudentCard from "../StudentCard/StudentCard";
 import cl from "./StudentsList.module.css"
 import {StudentState} from "../../types/student";
+import StudentModal from "../StudentModal/StudentModal";
 
-interface StudentListProps extends StudentState{
-
+interface StudentListProps extends StudentState {
+    studentModal: boolean,
+    setStudentModal: (arg0: boolean) => void,
+    setCurrentStudentId: (arg0: any) => void
 }
 
-const StudentsList: FC<StudentListProps> = ({error, loading, students}) => {
+const StudentsList: FC<StudentListProps> = (props) => {
+    const {error, loading, students, studentModal, setStudentModal, setCurrentStudentId} = props
     const {fetchStudents} = useActions()
-    const [filter, setFilter] = useState({ sort: "", query: "" });
+
 
     useEffect(() => {
         fetchStudents()
@@ -31,7 +35,10 @@ const StudentsList: FC<StudentListProps> = ({error, loading, students}) => {
                     <StudentCard
                         key={student.id}
                         student={student}
-                        index={students.indexOf(student)}/>
+                        index={students.indexOf(student)}
+                        setVisible={setStudentModal}
+                            setCurrentStudentId={setCurrentStudentId}
+                    />
                 )}
             </div>
         </div>

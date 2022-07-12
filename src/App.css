@@ -8,10 +8,16 @@
     --color-blue: #0047FF;
     --color-text: #7A797D;
     --color-dark-blue: #1a1e25;
+    --color-red: #ff2400;
+    --color-green: #03c03c;
     --color-button-bg: var(--color-white);
     --color-button-text: var(--color-blue);
     --color-button-hov: var(--color-blue);
     --color-button-text-hov: var(--color-white);
+    --color-button-danger-bg: var(--color-white);
+    --color-button-danger-text: var(--color-red);
+    --color-button-safe-bg: var(--color-white);
+    --color-button-safe-text: var(--color-green);
     --color-link-text: var(--color-text);
     --color-link-text-active: var(--color-blue);
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

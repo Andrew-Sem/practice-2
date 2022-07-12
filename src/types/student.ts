@@ -27,6 +27,7 @@ export enum StudentActionTypes {
     FETCH_STUDENTS_SUCCESS = 'FETCH_STUDENTS_SUCCESS',
     FETCH_STUDENTS_ERROR = "FETCH_STUDENTS_ERROR",
     CREATE_STUDENT = 'CREATE_STUDENT',
+    DELETE_STUDENT = 'DELETE_STUDENT'
 }
 
 interface FetchStudentsAction {
@@ -48,7 +49,13 @@ interface CreateStudent {
     payload: student
 }
 
+interface DeleteStudent {
+    type: StudentActionTypes.DELETE_STUDENT
+    payload: number | string
+}
+
 export type StudentAction = FetchStudentsAction
     | FetchStudentsSuccessAction
     | FetchUsersErrorAction
     | CreateStudent
+    | DeleteStudent

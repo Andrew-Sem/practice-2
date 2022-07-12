@@ -13,10 +13,10 @@
     background-color: var(--color-gray);
 }
 
-.row:hover{
-    background-color: var(--color-blue);
-    color: var(--color-white)
-}
+/*.row:hover{*/
+/*    background-color: var(--color-blue);*/
+/*    color: var(--color-white)*/
+/*}*/
 
 .index_block{
     width: 30px;

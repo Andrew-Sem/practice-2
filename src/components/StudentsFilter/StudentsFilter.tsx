@@ -20,7 +20,7 @@ const StudentsFilter:FC<StudentsFilterProps> = ({ filter, setFilter }) => {
                 onChange={(selectedSort: any) =>
                     setFilter({ ...filter, sort: selectedSort })
                 }
-                defaultValue="Sort by"
+                defaultValue="Sort"
                 options={[
                     { value: "surname", name: "By surname" },
                     { value: "name", name: "By first name" },

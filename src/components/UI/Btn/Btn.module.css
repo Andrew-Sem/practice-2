@@ -14,3 +14,25 @@
     background: var(--color-button-hov);
     color: var(--color-button-text-hov);
 }
+
+.btn_danger{
+    background-color: var(--color-button-danger-bg);
+    color: var(--color-button-danger-text);
+    border: 1px solid var(--color-button-danger-text);
+}
+
+.btn_danger:hover{
+    background-color: var(--color-button-danger-text);
+    color: var(--color-button-danger-bg);
+}
+
+.btn_safe{
+    background-color: var(--color-button-safe-bg);
+    color: var(--color-button-safe-text);
+    border: 1px solid var(--color-button-safe-text);
+}
+
+.btn_safe:hover{
+    background-color: var(--color-button-safe-text);
+    color: var(--color-button-safe-bg);
+}

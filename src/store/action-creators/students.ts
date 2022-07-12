@@ -20,8 +20,13 @@ export const fetchStudents = () => {
 }
 
 export const createStudent = (student: student) => {
-
     return (dispatch: Dispatch<StudentAction>) => {
         dispatch({type: StudentActionTypes.CREATE_STUDENT, payload: student})
+    }
+}
+
+export const deleteStudent = (id: string | number) => {
+    return(dispatch: Dispatch<StudentAction>) => {
+        dispatch({type: StudentActionTypes.DELETE_STUDENT, payload: id})
     }
 }

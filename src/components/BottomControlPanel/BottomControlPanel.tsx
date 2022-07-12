@@ -39,7 +39,11 @@ const BottomControlPanel:FC<BottomControlPanelProps> = ({modals, filter, setFilt
                         onChange={(e) => setNumOfRandomStudents(e.target.value)}
                         type={"number"}
                     />
-                    <Btn onClick={() => addALotOfNewRandomStudents(numOfRandomStudents)}>Add random students</Btn>
+                    <Btn
+                        onClick={() => addALotOfNewRandomStudents(numOfRandomStudents)}
+                        type={"safe"}>
+                        Add random students
+                    </Btn>
                     <Btn onClick={() => studentModal.setVisible(!studentModal.visible)}>Add 1 student</Btn>
                     <Btn onClick={() => graphModal.setVisible(!graphModal.visible)}>Show graph</Btn>
                 </div>

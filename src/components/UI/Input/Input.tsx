@@ -2,7 +2,7 @@ import cl from "./Input.module.css";
 import {FC} from "react";
 
 interface InputProps {
-    placeholder: string,
+    placeholder?: string,
     value: string | number,
     type?: string,
     label?: string,
