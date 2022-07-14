@@ -1,6 +1,5 @@
 import {FC} from "react";
 import cl from "./Histogram.module.css"
-import {student} from "../../types/student";
 
 interface MarksProps{
     data: Array<any>,
@@ -12,7 +11,6 @@ interface MarksProps{
 }
 
 const Marks:FC<MarksProps> = ({data, xScale, yScale, xValue, yValue, tooltipFormat}) => {
-    console.log(data)
     return (
         <>
             {data.map(d => (<rect

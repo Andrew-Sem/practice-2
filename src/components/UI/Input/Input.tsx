@@ -3,7 +3,7 @@ import {FC} from "react";
 
 interface InputProps {
     placeholder?: string,
-    value: string | number,
+    value: string | number | undefined,
     type?: string,
     label?: string,
     onChange?(e: any): void

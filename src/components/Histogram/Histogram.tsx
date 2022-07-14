@@ -50,8 +50,6 @@ const Histogram: FC<HistogramProps> = ({data}) => {
 
     if (!data.length)
         return <h1>Loading..</h1>
-
-
     const margin = {
         top: 20,
         right: 30,

@@ -8,7 +8,6 @@ interface AxisBottomProps{
 }
 
 export const AxisBottom:FC<AxisBottomProps> = ({ xScale, innerHeight, tickFormat }) =>{
-    console.log(xScale.ticks())
     return (xScale.ticks().map((tickValue:any) => (
         <g className={cl.tick} key={tickValue} transform={`translate(${xScale(tickValue)},0)`}>
             <line y2={innerHeight} />
