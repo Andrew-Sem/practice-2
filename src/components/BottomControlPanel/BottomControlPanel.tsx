@@ -16,7 +16,7 @@ interface BottomControlPanelProps {
 
 const BottomControlPanel: FC<BottomControlPanelProps> = ({modals, filter, setFilter}) => {
     const [numOfRandomStudents, setNumOfRandomStudents] = useState(0)
-    const {studentAddModal, graphModal} = modals
+    const {studentAddModal, histogramModal, pieChartModal} = modals
     const {createStudent} = useActions()
     const addALotOfNewRandomStudents = (num: number) => {
         if (num < 1) return {message: "num must be > 0", num: num}
@@ -51,7 +51,8 @@ const BottomControlPanel: FC<BottomControlPanelProps> = ({modals, filter, setFil
                     >
                         Add student
                     </Btn>
-                    <Btn onClick={() => graphModal.setVisible(!graphModal.visible)}>Show graph</Btn>
+                    <Btn onClick={() => histogramModal.setVisible(!histogramModal.visible)}>Histogram</Btn>
+                    <Btn onClick={() => pieChartModal.setVisible(!pieChartModal.visible)}>Education quality</Btn>
                 </div>
             </div>
         </div>

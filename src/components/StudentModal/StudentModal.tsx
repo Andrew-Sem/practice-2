@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import Modal from "../UI/Modal/Modal";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import Btn from "../UI/Btn/Btn";
@@ -62,7 +62,7 @@ const StudentModal: FC<StudentModalProps> = ({visible, setVisible, id}) => {
                 </div>
                 <div className={cl.btns}>
                     <Btn onClick={deleteCurrentStudent} type={"danger"}>Delete student</Btn>
-                    <Btn onClick={changeCurrentStudent} type={"safe"}>Save changes</Btn>
+                    {/*<Btn onClick={changeCurrentStudent} type={"safe"}>Save changes</Btn>*/}
                 </div>
             </div>
         </Modal>

@@ -9,6 +9,7 @@ import HistogramModal from "./components/HistogramModal/HistogramModal";
 import {useStudents} from "./hooks/useStudents";
 import {useTypedSelector} from "./hooks/useTypedSelector";
 import StudentModal from "./components/StudentModal/StudentModal";
+import PieChartModal from "./components/PieChartModal/PieChartModal";
 
 
 const App = () => {
@@ -17,12 +18,14 @@ const App = () => {
     const sortedAndSearchedStudents = useStudents(students, filter.sort, filter.query);
     const [studentAddModal, setStudentAddModal] = useState(false)
     const [studentModal, setStudentModal] = useState(false)
-    const [graphModal, setGraphModal] = useState(false)
+    const [histogramModal, setHistogramModal] = useState(false)
+    const [pieChartModal, setPieChartModal] = useState(false)
     const [currentStudentId, setCurrentStudentId] = useState("")
     const modals: modals = {
         studentModal: {visible: studentModal, setVisible: setStudentModal},
         studentAddModal: {visible: studentAddModal, setVisible: setStudentAddModal},
-        graphModal: {visible: graphModal, setVisible: setGraphModal},
+        histogramModal: {visible: histogramModal, setVisible: setHistogramModal},
+        pieChartModal: {visible: pieChartModal, setVisible: setPieChartModal},
     }
 
     return (
@@ -39,7 +42,8 @@ const App = () => {
             <BottomControlPanel modals={modals} filter={filter} setFilter={setFilter}/>
             <StudentModal visible={studentModal} setVisible={setStudentModal} id={currentStudentId}/>
             <StudentAddModal visible={studentAddModal} setVisible={setStudentAddModal}/>
-            <HistogramModal visible={graphModal} setVisible={setGraphModal} data={sortedAndSearchedStudents}/>
+            <HistogramModal visible={histogramModal} setVisible={setHistogramModal} data={sortedAndSearchedStudents}/>
+            <PieChartModal visible={pieChartModal} setVisible={setPieChartModal} data={sortedAndSearchedStudents}/>
         </div>
     );
 }
