@@ -11,7 +11,7 @@
     font-size: 16px;
     padding: 0.2rem;
     margin: 0.5rem 0;
-    width: 200px;
+    width: clamp(4rem, 150px, 10rem);
     border-radius: 0.2rem;
 }
 
