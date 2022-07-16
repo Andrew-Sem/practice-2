@@ -8,6 +8,7 @@ import cl from "./PieChart.module.css"
 interface PieChartModalProps {
     data: Array<student>;
     visible: boolean;
+
     setVisible(arg0: boolean): any;
 }
 
@@ -38,9 +39,9 @@ const PieChartModal: FC<PieChartModalProps> = ({setVisible, visible, data}) => {
             })
         if (diagramType === diagramTypes.GOOD)
             setPreparedData({
-                FEE: data.filter((student) => (student.avgMarks > 75 && student.faculty === "FEE")).length,
-                FAM: data.filter((student) => (student.avgMarks > 75 && student.faculty === "FAM")).length,
-                FE: data.filter((student) => (student.avgMarks > 75 && student.faculty === "FE")).length
+                FEE: data.filter((student) => (student.avgMarks > 75 && student.avgMarks < 90 && student.faculty === "FEE")).length,
+                FAM: data.filter((student) => (student.avgMarks > 75 && student.avgMarks < 90 && student.faculty === "FAM")).length,
+                FE: data.filter((student) => (student.avgMarks > 75 && student.avgMarks < 90 && student.faculty === "FE")).length
             })
         if (diagramType === diagramTypes.EXCELLENT)
             setPreparedData({
@@ -109,7 +110,7 @@ const PieChartModal: FC<PieChartModalProps> = ({setVisible, visible, data}) => {
         })
         .style("text-anchor", "middle")
         .style("font-size", 17)
-    if(!preparedData)
+    if (!preparedData)
         return <h1>Wait for loading</h1>
     return (
         <Modal visible={visible} setVisible={setVisible}>

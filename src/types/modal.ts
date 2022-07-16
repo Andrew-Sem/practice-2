@@ -7,5 +7,6 @@ export interface modals {
     studentModal: modal,
     studentAddModal: modal,
     histogramModal: modal,
-    pieChartModal: modal
+    pieChartModal: modal,
+    graphModal: modal
 }

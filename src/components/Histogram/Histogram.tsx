@@ -6,7 +6,7 @@ import Marks from "./Marks";
 import cl from "./Histogram.module.css"
 import {findBiggestObjByFieldLength} from "../../utils/findBiggestObjByField";
 import {student} from "../../types/student";
-import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useSortedStudents} from "../../hooks/useStudents";
 
 const width = 700;
 const height = 400;
@@ -16,54 +16,24 @@ interface HistogramProps {
     data: Array<student>
 }
 
-interface preparedData{
-    name: string,
-    count: number
-}
 
 const Histogram: FC<HistogramProps> = ({data}) => {
-    const [histogramType, setHistogramType] = useState("faculty")
-
-    let countFEE = 0, countFAM = 0, countFE = 0
-    for (let item of data) {
-        if (item.faculty === "FEE")
-            countFEE++
-        if (item.faculty === "FAM")
-            countFAM++
-        if (item.faculty === "FE")
-            countFE++
-    }
-    const preparedDataArray:Array<preparedData> = [
-        {
-            name: "FEE",
-            count: countFEE
-        },
-        {
-            name: "FAM",
-            count: countFAM
-        },
-        {
-            name: "FE",
-            count: countFE
-        }
-    ]
-
+    const sortedStudents: Array<student> = useSortedStudents(data, "avgMarks")
+    const preparedDataArray: Array<student> = sortedStudents.slice(-10)
     if (!data.length)
         return <h1>Loading..</h1>
     const margin = {
         top: 20,
         right: 30,
         bottom: 65,
-        // find the biggest country by her name length and set 9px for 1 symbol
-        // left: findBiggestObjByFieldLength(data, "education.speciality").education.speciality.length * 9};
-        left: 50
+        left: 90
     }
 
     const innerHeight = height - margin.top - margin.bottom;
     const innerWidth = width - margin.left - margin.right;
 
-    const yValue = (d:preparedData) => d.name;
-    const xValue = (d:preparedData) => d.count;
+    const yValue = (d: student) => d.surname;
+    const xValue = (d: student) => d.avgMarks;
 
     const siFormat = format('');
     const xAxisTickFormat = (tickValue: any) => siFormat(tickValue).replace('G', 'B');
@@ -92,7 +62,7 @@ const Histogram: FC<HistogramProps> = ({data}) => {
                     y={innerHeight + xAxisLabelOffset}
                     textAnchor="middle"
                 >
-                    Count of students
+                    Top students
                 </text>
                 <Marks
                     data={preparedDataArray}

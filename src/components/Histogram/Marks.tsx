@@ -15,7 +15,7 @@ const Marks:FC<MarksProps> = ({data, xScale, yScale, xValue, yValue, tooltipForm
         <>
             {data.map(d => (<rect
                 className={cl.mark}
-                key={d.name}
+                key={d.id}
                 x={0}
                 y={yScale(yValue(d))}
                 width={xScale(xValue(d))}

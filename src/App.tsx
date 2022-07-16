@@ -10,6 +10,7 @@ import {useStudents} from "./hooks/useStudents";
 import {useTypedSelector} from "./hooks/useTypedSelector";
 import StudentModal from "./components/StudentModal/StudentModal";
 import PieChartModal from "./components/PieChartModal/PieChartModal";
+import GraphModal from "./components/GraphModal/GraphModal";
 
 
 const App = () => {
@@ -20,12 +21,14 @@ const App = () => {
     const [studentModal, setStudentModal] = useState(false)
     const [histogramModal, setHistogramModal] = useState(false)
     const [pieChartModal, setPieChartModal] = useState(false)
+    const [graphModal, setGraphModal] = useState(false)
     const [currentStudentId, setCurrentStudentId] = useState("")
     const modals: modals = {
         studentModal: {visible: studentModal, setVisible: setStudentModal},
         studentAddModal: {visible: studentAddModal, setVisible: setStudentAddModal},
         histogramModal: {visible: histogramModal, setVisible: setHistogramModal},
         pieChartModal: {visible: pieChartModal, setVisible: setPieChartModal},
+        graphModal: {visible: graphModal, setVisible: setGraphModal},
     }
 
     return (
@@ -44,6 +47,7 @@ const App = () => {
             <StudentAddModal visible={studentAddModal} setVisible={setStudentAddModal}/>
             <HistogramModal visible={histogramModal} setVisible={setHistogramModal} data={sortedAndSearchedStudents}/>
             <PieChartModal visible={pieChartModal} setVisible={setPieChartModal} data={sortedAndSearchedStudents}/>
+            <GraphModal visible={graphModal} setVisible={setGraphModal} data={sortedAndSearchedStudents}/>
         </div>
     );
 }
